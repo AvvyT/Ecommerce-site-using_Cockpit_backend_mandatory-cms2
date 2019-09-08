@@ -1,0 +1,25 @@
+.slyle-bild {
+    width: 50%;
+}
+
+.all-page {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.items {
+    width: 40%;
+    border: 2px solid rgb(235, 181, 232);
+    border-radius: 7px;
+    margin: 15px;
+    font-size: 19px;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.input {
+    border: 2px solid rgb(235, 181, 232);
+    font-size: 19px;
+    border-radius: 7px;
+}
