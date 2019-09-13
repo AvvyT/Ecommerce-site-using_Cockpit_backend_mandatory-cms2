@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Home from './components/Home';
@@ -6,9 +6,18 @@ import Article from './components/Article';
 import Bag from './components/Bag';
 import Checkout from './components/Checkout';
 import Finish from './components/Finish';
+import { item$ } from './components/store';
 import './App.css';
 
 function App() {
+  const [bag, updateBag] = useState(item$.value);
+
+  useEffect(() => {
+    let subscription = item$.subscribe(() => {
+      updateBag(bag);
+    }); return subscription.unsubscribe();
+  }, [bag]);
+
   return (
     <Router>
       <div className="App-header">

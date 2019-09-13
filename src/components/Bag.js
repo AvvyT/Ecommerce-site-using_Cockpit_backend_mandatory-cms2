@@ -7,7 +7,7 @@ function Bag() {
             <Helmet>
                 <title>Bag page</title>
             </Helmet>
-            <p>yuor Bag page....</p>
+            <p>your Bag page....</p>
         </div>
     );
 }
