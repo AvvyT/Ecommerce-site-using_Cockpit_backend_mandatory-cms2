@@ -23,17 +23,11 @@
     border: 2px solid rgb(235, 181, 232);
     border-radius: 7px;
     width: 80px;
-    font-size: 17px;
+    height: 28px;
+    margin-right: 10px;
+    font-size: 19px;
     margin-bottom: 15px;
     outline: none;
-}
-
-.buy {
-    border: 2px solid rgb(235, 181, 232);
-    border-radius: 7px;
-    width: 80px;
-    font-size: 17px;
-    margin-left: 5px;
 }
 
 .page-numbers {

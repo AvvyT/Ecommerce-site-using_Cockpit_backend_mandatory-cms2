@@ -1,0 +1,27 @@
+.table {
+    width: 100%;
+    min-height: 100vh;
+    margin: 15px;
+    font-size: 20px;
+    box-sizing: border-box;
+    padding: 40px;
+    border: 2px solid rgb(235, 181, 232);
+    border-radius: 15px;
+}
+
+.delete {
+    margin-left: 20px;
+    border: 2px solid rgb(235, 181, 232);
+    color: red;
+    font-size: 19px;
+    padding: 7px;
+    border-radius: 7px;
+}
+
+.buy {
+    margin-bottom: 12px;
+    font-weight: bold;
+    border: 2px solid rgb(235, 181, 232);
+    border-radius: 7px;
+    font-size: 22px;
+}

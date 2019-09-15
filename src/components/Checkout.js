@@ -7,7 +7,7 @@ function Checkout() {
             <Helmet>
                 <title>Checkout page</title>
             </Helmet>
-            <p>yuor Checkout page....</p>
+            <h2 style={{ color: 'purple' }}>Please Checkout your order!</h2>
         </div>
     );
 }

@@ -76,7 +76,7 @@ function Article(props) {
                             <title>Article page</title>
                         </Helmet>
                         <div className='one'>
-                            <button className='my-bag'><Link to={'/bag/' + article._id + sum.length}>Bag {sum.length}</Link></button>
+                            <button className='my-bag'><Link to={'/bag/all-articles/' + user.length}>Bag {user.length}</Link></button>
 
                             <h3 style={{ color: 'purple' }}>{article.Name[0].display}</h3>
                             <br></br>
@@ -99,14 +99,14 @@ function Article(props) {
                             </div>
                         ))}
 
-                        <label>ADD <input className='input-add' type='number'
+                        <label>Quantity <input className='input-add' type='number'
                             min={1}
                             max={article.Lagersaldo}
                             onChange={(e) => {
                                 updateSum(e.target.value);
                             }}>
                         </input>
-                            <button className='buy' value={user} onClick={buy}>Buy</button></label>
+                            <button className='buy' value={user} onClick={buy}>ADD</button></label>
                     </div>
                 )}
         </>
