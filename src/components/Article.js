@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { Link } from 'react-router-dom';
 import { item$, updateItem } from './store';
 import MDReactComponent from 'markdown-react-js';
 import axios from 'axios';
@@ -51,7 +50,6 @@ function Article(props) {
     const buy = () => {
 
         let newUser = [...user]; // en kopia 
-        console.log(user);
         let index = newUser.findIndex(x => x.article._id === article._id); // om vi har lika
 
         if (index !== -1) { // om det redan finns
@@ -62,6 +60,7 @@ function Article(props) {
                 sum: parseInt(sum),
             });
         }
+        console.log(newUser);
         updateItem(newUser);
     }
 
@@ -76,7 +75,6 @@ function Article(props) {
                             <title>Article page</title>
                         </Helmet>
                         <div className='one'>
-                            <button className='my-bag'><Link to={'/bag/all-articles/' + user.length}>Bag {user.length}</Link></button>
 
                             <h3 style={{ color: 'purple' }}>{article.Name[0].display}</h3>
                             <br></br>

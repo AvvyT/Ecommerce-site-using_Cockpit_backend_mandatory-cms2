@@ -85,9 +85,7 @@ function Home() {
                     </div>
                 ))}
             </div>
-            <ul className="page-numbers">
-                {pageFun()}
-            </ul>
+            <ul className="page-numbers">{pageFun()}</ul>
         </div>
     );
 }

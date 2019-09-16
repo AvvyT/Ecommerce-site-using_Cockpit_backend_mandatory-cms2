@@ -25,3 +25,32 @@
     border-radius: 7px;
     font-size: 22px;
 }
+
+.form-style {
+    width: 100%;
+    margin: 15px;
+    font-size: 20px;
+    box-sizing: border-box;
+    padding: 40px;
+    border: 2px solid rgb(235, 181, 232);
+    border-radius: 15px;
+}
+
+.myInput {
+    border: 2px solid rgb(235, 181, 232);
+    border-radius: 7px;
+    font-size: 20px;
+}
+
+.page {
+    border: 2px solid rgb(235, 181, 232);
+    border-radius: 7px;
+    color: blueviolet;
+    width: 80px;
+    height: 28px;
+    margin-top: 40px;
+    margin-left: 40%;
+    font-weight: bold;
+    font-size: 19px;
+    outline: none;
+}
