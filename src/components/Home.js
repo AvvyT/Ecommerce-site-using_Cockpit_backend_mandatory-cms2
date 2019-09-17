@@ -11,27 +11,33 @@ function Home() {
     const [checked, updateChecked] = useState(false);
     const [numberPosts, updateNumberposts] = useState(1);
     const [currentPage, updateCurrentPage] = useState(1);
+    const [search, updateSearch] = useState('');
+
 
     const limit = 3;
     // då börjar page från 0, annars hopper över 3
     let skip = (currentPage - 1) * limit;
 
-    let chekPage = `/Case?token=mytoken&sort[Lagersaldo]=-1&limit=${limit}&skip=${skip}`;
-    let chekChecked = `?${checked ? "&filter[Lagersaldo]=true" : ""}`;
+    let chekChecked = `${checked ? "&filter[Lagersaldo]=true" : ""}`;
+    let chekPage = `&sort[Lagersaldo]=-1&limit=${limit}&skip=${skip}`;
+    let filter = `filter[name][$regex]=${search}`;
 
     useEffect(() => {
+        let apiString = `${api}?token=mytoken&${filter}${chekChecked}${chekPage}`;
+        //console.log(apiString);
 
-        axios.get(`${api}${chekPage}${chekChecked}`)
+        axios.get(apiString)
             .then((response) => {
                 console.log(response.data.entries);
                 //console.log(response.data.total);
+
                 updateNumberposts(response.data.total);
                 updateArticles(response.data.entries);
             })
             .catch(error => {
                 console.log(error);
             });
-    }, [chekPage, chekChecked, checked]);
+    }, [search, chekPage, chekChecked, checked, filter]);
 
     const pageFun = () => {
         // Logic for show page numbers
@@ -66,7 +72,11 @@ function Home() {
             </Helmet>
             <h2 style={{ color: 'purple' }}>Sneakers-your damskor!</h2>
             <br></br>
-            <label>Search <input className='input' placeholder=' Write your shoe ..'></input></label>
+            <label>Search <input className='input' placeholder=' Write your shoe ..'
+                type='text'
+                value={search}
+                onChange={e => updateSearch(e.target.value)}
+            ></input></label>
             <br></br>
 
             <label><input type="checkbox"

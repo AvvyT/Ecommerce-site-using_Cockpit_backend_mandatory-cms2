@@ -7,7 +7,8 @@ function Finish() {
             <Helmet>
                 <title>Finish page</title>
             </Helmet>
-            <p>yuor Finish page....</p>
+            <h3>Congratulations!</h3>
+            <p style={{ color: 'lightgreen' }}>Your order has been placed!</p>
         </div>
     );
 }
