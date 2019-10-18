@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import axios from 'axios';
 import './Style.css';
+// opna backend i webben med: http://192.168.99.100:8080/collections
 
 const api = `http://192.168.99.100:8080/api/collections/get/damskor`;
 
